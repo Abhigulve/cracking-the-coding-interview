@@ -3,24 +3,24 @@ package linkedlist;
 /**
  * @author Abhijeet Gulve
  */
-public class ListList {
+public class LinkList {
     private Node head;
     private Node p;
 
     public static void main(String[] args) {
-        ListList listList = new ListList();
-        listList.insert(10);
-        listList.insert(12);
-        listList.insert(15);
-        listList.insert(18);
-        ListList listList1 = new ListList();
-        listList1.insert(1);
-        listList1.insert(13);
-        listList1.insert(16);
-        listList1.insert(17);
+        LinkList linkList = new LinkList();
+        linkList.insert(10);
+        linkList.insert(12);
+        linkList.insert(15);
+        linkList.insert(18);
+        LinkList linkList1 = new LinkList();
+        linkList1.insert(1);
+        linkList1.insert(13);
+        linkList1.insert(16);
+        linkList1.insert(17);
         LinkListMergeSort linkListMergeSort = new LinkListMergeSort();
-        Node node = linkListMergeSort.mergeLists(listList.head, listList1.head);
-        listList.printList(node);
+        Node node = linkListMergeSort.mergeLists(linkList.head, linkList1.head);
+        linkList.printList(node);
     }
 
     public static void printList(Node tr) {

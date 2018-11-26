@@ -1,4 +1,4 @@
-import linkedlist.ListList;
+import linkedlist.LinkList;
 import linkedlist.LinkListMergeSort;
 import linkedlist.MockData;
 import linkedlist.Node;
@@ -12,13 +12,13 @@ public class LinkListMergeSortTest {
     public void partitionTest() {
 
         Node linkedList = MockData.getLinkedList();
-        ListList.printList(LinkListMergeSort.mergeSort(linkedList));
+        LinkList.printList(LinkListMergeSort.mergeSort(linkedList));
 
 //        for (int i = 0; i < 2; i++) {
 //            Node[] partition = LinkListMergeSort.partition(linkedList);
-//            ListList.printList(partition[0]);
+//            LinkList.printList(partition[0]);
 //            System.out.println();
-//            ListList.printList(partition[1]);
+//            LinkList.printList(partition[1]);
 //            System.out.println();
 //        }
     }

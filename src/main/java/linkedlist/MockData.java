@@ -6,11 +6,22 @@ package linkedlist;
 public class MockData {
 
     public static Node getLinkedList() {
-        ListList listList = new ListList();
-        listList.insert(10);
-        listList.insert(19);
-        listList.insert(143);
-        listList.insert(18);
-        return listList.getlinkedList();
+        LinkList linkList = new LinkList();
+        linkList.insert(10);
+        linkList.insert(19);
+        linkList.insert(143);
+        linkList.insert(18);
+        return linkList.getlinkedList();
+    }
+
+    public static Node getDuplicateLinkedList() {
+        LinkList linkList = new LinkList();
+        linkList.insert(1);
+        linkList.insert(1);
+        linkList.insert(1);
+        linkList.insert(2);
+        linkList.insert(2);
+        linkList.insert(3);
+        return linkList.getlinkedList();
     }
 }
