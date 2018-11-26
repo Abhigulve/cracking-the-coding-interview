@@ -3,18 +3,19 @@ package linkedlist;
 /**
  * @author Abhijeet Gulve
  */
-public class ListListMergeSort {
+public class LinkListMergeSort {
 
-    private void partition(Node head, Node start, Node midStart) {
+    public static Node[] partition(Node head) {
 
-        Node slow = null;
-        Node fast = null;
+        Node slow;
+        Node fast;
+        Node[] partitionNode = new Node[2];
         if (head == null || head.next == null) {
-            start = head;
-            midStart = null;
+            partitionNode[0] = head;
+            partitionNode[1] = null;
         } else {
             slow = head;
-            fast = head;
+            fast = head.next;
 
             while (fast != null) {
                 fast = fast.next;
@@ -23,13 +24,14 @@ public class ListListMergeSort {
                     fast = fast.next;
                 }
             }
-            start = head;
-            midStart = slow.next;
+            partitionNode[0] = head;
+            partitionNode[1] = slow.next;
             slow.next = null;
         }
+        return partitionNode;
     }
 
-    public Node mergeLists(Node first, Node second) {
+    public static Node mergeLists(Node first, Node second) {
         Node dummy = new Node(0, null);
         Node res = dummy;
         while (true) {
@@ -51,5 +53,17 @@ public class ListListMergeSort {
             res = res.next;
         }
         return dummy.next;
+    }
+
+
+    public static Node mergeSort(Node head) {
+
+        if (head == null || head.next == null) {
+            return head;
+        }
+        Node[] partition = partition(head);
+        Node node1 = mergeSort(partition[0]);
+        Node node2 = mergeSort(partition[1]);
+        return mergeLists(node1, node2);
     }
 }
