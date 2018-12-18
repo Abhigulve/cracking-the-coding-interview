@@ -16,7 +16,7 @@ import java.util.Arrays;
 public class IsUnique {
 
     public static void main(String[] args) {
-        String string = "abcd";
+        String string = "aabcd";
         System.out.println(isUnique(string));
     }
 
@@ -25,22 +25,19 @@ public class IsUnique {
         Arrays.fill(charArray, -1);
         for (int i = 0; i < str.length(); i++) {
             char character = str.charAt(i);
-            if (character >= 97) {
-                if (charArray[character - 'A' - 7] != -1) {
-                    return false;
-                } else {
-                    charArray[character - 'A' - 7] = 0;
-                }
+            int indexByCharacter = getIndexByCharacter(character);
+            if (charArray[indexByCharacter] != -1) {
+                return false;
             } else {
-                if (charArray[character - 'A'] != -1) {
-                    return false;
-                } else {
-                    charArray[character - 'A'] = 0;
-                }
+                charArray[indexByCharacter] = 0;
             }
         }
         return true;
     }
 
-
+    static int getIndexByCharacter(char character) {
+        if (character >= 97) {
+            return character - 'A' - 7;
+        } else return character - 'A';
+    }
 }

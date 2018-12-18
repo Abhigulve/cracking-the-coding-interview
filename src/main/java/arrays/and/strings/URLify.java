@@ -7,7 +7,7 @@ import java.util.Arrays;
  */
 public class URLify {
     public static void main(String[] args) {
-        urliFy("Mr John Smith    ", 13);
+        urliFy(" Mr JohnSmith    ", 13);
     }
 
     /**
