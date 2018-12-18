@@ -23,17 +23,18 @@ public class RemoveDuplicates {
         Node start = head;
         Node travesalNode = head.next;
         while (true) {
-            if (travesalNode.data != start.data) {
-                start.next = travesalNode;
-                start = travesalNode;
-                travesalNode = travesalNode.next;
-            }
             if (travesalNode == null) {
                 break;
             }
-            travesalNode = travesalNode.next;
-
+            if (travesalNode.data != start.data) {
+                start.next = travesalNode;
+                start = travesalNode;
+                if (travesalNode.next != null)
+                    travesalNode = travesalNode.next;
+            } else
+                travesalNode = travesalNode.next;
         }
+        start.next = null;
         return head;
     }
 

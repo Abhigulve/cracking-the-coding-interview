@@ -18,10 +18,13 @@ public class MockData {
         LinkList linkList = new LinkList();
         linkList.insert(1);
         linkList.insert(1);
-        linkList.insert(1);
+//        linkList.insert(1);
         linkList.insert(2);
         linkList.insert(2);
         linkList.insert(3);
+        linkList.insert(4);
+        linkList.insert(5);
+//        linkList.insert(3);
         return linkList.getlinkedList();
     }
 }
