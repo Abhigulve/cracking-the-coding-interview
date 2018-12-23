@@ -1,43 +1,45 @@
 package trees.and.graphs.model;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author Abhijeet Gulve
  */
 public class GraphCreator {
-    public static GraphNode getDefaultGraph() {
-        GraphNode node5 = new GraphNode(5);
-        List<GraphNode> node5Childs = new ArrayList<GraphNode>();
-        node5.setNode(node5Childs);
-        GraphNode node4 = new GraphNode(4);
-        List<GraphNode> node4Childs = new ArrayList<GraphNode>();
-        node4Childs.add(node5);
-        node4.setNode(node4Childs);
-        GraphNode node3 = new GraphNode(3, new ArrayList<GraphNode>());
-        List<GraphNode> node3Childs = new ArrayList<GraphNode>();
-        node3.setNode(node3Childs);
-        node4Childs.add(node3);
-        List<GraphNode> connectedNodesOf2 = new ArrayList<GraphNode>();
-        connectedNodesOf2.add(node3);
-        connectedNodesOf2.add(node5);
-        node5Childs.add(node3);
-        node5Childs.add(node4);
-
-        GraphNode node2 = new GraphNode(2, connectedNodesOf2);
-        node5Childs.add(node2);
-        List<GraphNode> connectedNodesOf1 = new ArrayList<GraphNode>();
-        connectedNodesOf1.add(node2);
-        connectedNodesOf1.add(node3);
-
-        GraphNode node1 = new GraphNode(1, connectedNodesOf1);
-        connectedNodesOf2.add(node1);
-        node3Childs.add(node1);
-        node3Childs.add(node2);
-        node3Childs.add(node5);
-        node3Childs.add(node4);
-        return node1;
+    public static Map<Integer, List<Integer>> getDefaultGraph() {
+        Map<Integer, List<Integer>> graph = new HashMap<>();
+        List<Integer> list1 = new ArrayList<>();
+        list1.add(3);
+        list1.add(2);
+        graph.put(1, list1);
+        List<Integer> list2 = new ArrayList<>();
+        list2.add(1);
+        list2.add(3);
+        list2.add(5);
+        graph.put(2, list2);
+        List<Integer> list3 = new ArrayList<>();
+        list3.add(1);
+        list3.add(2);
+        list3.add(3);
+        list3.add(4);
+        graph.put(3, list3);
+        List<Integer> list4 = new ArrayList<>();
+        list4.add(3);
+        list4.add(5);
+        graph.put(4, list4);
+        List<Integer> list5 = new ArrayList<>();
+        list5.add(4);
+        list5.add(2);
+        list5.add(3);
+        graph.put(5, list5);
+        return graph;
     }
 
+    public static void printGraph(Map<Integer, List<Integer>> graph) {
+        graph.forEach((k, v) -> {
+            System.out.print(k + "  ");
+            v.forEach(t -> System.out.print(t + "  "));
+            System.out.println();
+        });
+    }
 }
