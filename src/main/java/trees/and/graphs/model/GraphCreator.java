@@ -19,8 +19,7 @@ public class GraphCreator {
         graph.put(2, list2);
         List<Integer> list3 = new ArrayList<>();
         list3.add(1);
-        list3.add(2);
-        list3.add(3);
+//        list3.add(2);
         list3.add(4);
         graph.put(3, list3);
         List<Integer> list4 = new ArrayList<>();
@@ -32,6 +31,8 @@ public class GraphCreator {
         list5.add(2);
         list5.add(3);
         graph.put(5, list5);
+        List<Integer> nonConnectedGraph = new ArrayList<>();
+        graph.put(7, nonConnectedGraph);
         return graph;
     }
 

@@ -9,8 +9,6 @@ import trees.and.graphs.model.GraphCreator;
 public class GrapthCreaterTest {
     @Test
     public void getDefaultGraphTest() {
-
         GraphCreator.printGraph( GraphCreator.getDefaultGraph());
     }
-
 }
