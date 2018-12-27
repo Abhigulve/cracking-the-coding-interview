@@ -1,5 +1,7 @@
-package trees.and.graphs.model;
+package trees.and.graphs;
 
+
+import trees.and.graphs.model.TreeNode;
 
 /**
  * @author Abhijeet Gulve

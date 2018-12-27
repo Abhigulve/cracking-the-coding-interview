@@ -5,9 +5,9 @@ package trees.and.graphs.model;
  */
 public class TreeNode {
 
-    TreeNode left;
-    TreeNode right;
-    int data;
+    public TreeNode left;
+    public TreeNode right;
+    public int data;
 
     public TreeNode(int data) {
         this.data = data;

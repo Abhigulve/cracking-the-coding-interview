@@ -1,6 +1,6 @@
-package trees.and.graphs.model;
+package trees.and.graphs;
 
-import sun.reflect.generics.tree.Tree;
+import trees.and.graphs.model.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -15,8 +15,8 @@ public class ListOfDepths {
         if (node == null) {
             return;
         }
-        if (resList.size() < level+1) {
-            resList.add(level, new LinkedList());
+        if (resList.size() == level) {
+            resList.add(level, new LinkedList<>());
         }
         resList.get(level).add(node);
         getListOfDepth(node.left, level + 1, resList);
@@ -24,19 +24,7 @@ public class ListOfDepths {
     }
 
     public static void main(String[] args) {
-        TreeNode treeNode = new TreeNode(10);
-        TreeNode left1 = new TreeNode(8);
-        TreeNode right1 = new TreeNode(2);
-        treeNode.left = left1;
-        treeNode.right = right1;
-        left1.left = new TreeNode(3);
-        /* Constructed binary tree is
-             10
-            /  \
-          8     2
-         /
-        3
-        */
+        TreeNode treeNode = TreeMock.getTreeNode();
         List<LinkedList<TreeNode>> resList = new ArrayList<>();
         getListOfDepth(treeNode, 0, resList);
         System.out.println(resList.get(1).get(0).data);

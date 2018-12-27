@@ -1,7 +1,7 @@
 package tree.and.graph.test;
 
 import org.junit.jupiter.api.Test;
-import trees.and.graphs.model.GraphCreator;
+import trees.and.graphs.GraphCreator;
 
 /**
  * @author Abhijeet Gulve
