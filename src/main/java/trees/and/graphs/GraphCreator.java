@@ -1,4 +1,4 @@
-package trees.and.graphs.model;
+package trees.and.graphs;
 
 import java.util.*;
 

@@ -1,8 +1,8 @@
 package tree.and.graph.test;
 
 import org.junit.jupiter.api.Test;
-import trees.and.graphs.model.GraphCreator;
-import trees.and.graphs.model.GraphTraversal;
+import trees.and.graphs.GraphCreator;
+import trees.and.graphs.GraphTraversal;
 
 import java.util.HashMap;
 import java.util.Map;
