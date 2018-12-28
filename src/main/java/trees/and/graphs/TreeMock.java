@@ -16,10 +16,10 @@ public class TreeMock {
         */
         TreeNode treeNode = new TreeNode(10);
         TreeNode left1 = new TreeNode(8);
-        TreeNode right1 = new TreeNode(2);
+        TreeNode right1 = new TreeNode(20);
         treeNode.left = left1;
         treeNode.right = right1;
-        left1.left = new TreeNode(3);
+//        left1.left = new TreeNode(3);
         return treeNode;
     }
 }
