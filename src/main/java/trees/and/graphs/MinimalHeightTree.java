@@ -14,7 +14,6 @@ public class MinimalHeightTree {
                 };
         TreeNode bst = createBST(array, 0, 9);
         System.out.println(bst);
-
     }
 
     public static TreeNode createBST(int[] array, int i, int j) {
