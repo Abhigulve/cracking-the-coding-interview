@@ -9,7 +9,7 @@
 <li> <h4>Strong vs Eventual consistency<br/>
 <li> <h4>Relational DB vs NoSql<br/>
 <ul>
-    <li><h6>Type of NoSql <br/>
+    <li><h5>Type of NoSql <br/>
         <ul>
          <li> <h6>Key Value<br/>
          <li> <h6>Wide Column<br/>
