@@ -7,10 +7,12 @@ import trees.and.graphs.model.TreeNode;
  */
 public class CheckBalanced {
     public static void main(String[] args) {
-        TreeNode treeNode = TreeMock.getTreeNode();
-//        System.out.println(isBalance(treeNode));
+        TreeNode balance = TreeMock.getTreeNode();
+//        System.out.println(isBalance(balance));
         TreeNode treeNodeUnbalance = TreeMock.getTreeNodeUnbalance();
-        System.out.println(isBalanceInHeight(treeNodeUnbalance));
+        System.out.println(isBalanceInHeight(treeNodeUnbalance)!=Integer.MIN_VALUE);
+        System.out.println(isBalanceInHeight(balance)!=Integer.MIN_VALUE);
+
     }
 
     static boolean isBalance(TreeNode node) {
@@ -36,12 +38,13 @@ public class CheckBalanced {
         if (node == null) {
             return 0;
         }
-        if (isBalanceInHeight(node.left) == Integer.MIN_VALUE || isBalanceInHeight(node.right) == Integer.MIN_VALUE) {
+        int rightHeight = isBalanceInHeight(node.right);
+        int leftHeight = isBalanceInHeight(node.left);
+        if (rightHeight == Integer.MIN_VALUE || leftHeight == Integer.MIN_VALUE) {
             return Integer.MIN_VALUE;
         } else {
-            int rightHeight = isBalanceInHeight(node.right);
-            int leftHeight = isBalanceInHeight(node.left);
-            System.out.println("At node " + node.data + " left value is " + leftHeight + " and right Height " + rightHeight);
+
+//            System.out.println("At node " + node.data + " left value is " + leftHeight + " and right Height " + rightHeight);
             if ((Math.abs(rightHeight - leftHeight)) > 1) {
                 return Integer.MIN_VALUE;
             } else {
