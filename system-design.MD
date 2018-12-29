@@ -1,40 +1,40 @@
 **System design topics to prepare**<br/>
 <ul>
-<li><h5>Vertical Vs Horizontal scaling<br/>
-<li> <h5>CAP<br/>
-<li> <h5>ACID vs BASE<br/>
-<li> <h5>Partitioning vs Sharing<br/> 
-<ul> <h5>Consistent hashing in sharding</ul>
-<li> <h5>Optimistic vs Pesimistic locking<br/>
-<li> <h5>Strong vs Eventual consistency<br/>
-<li> <h5>Relational DB vs NoSql<br/>
+<li> <h4>Vertical Vs Horizontal scaling<br/>
+<li> <h4>CAP<br/>
+<li> <h4>ACID vs BASE<br/>
+<li> <h4>Partitioning vs Sharing<br/> 
+<ul> <h4>Consistent hashing in sharding</ul>
+<li> <h4>Optimistic vs Pesimistic locking<br/>
+<li> <h4>Strong vs Eventual consistency<br/>
+<li> <h4>Relational DB vs NoSql<br/>
 <ul>
     <li><h6>Type of NoSql <br/>
         <ul>
-         <li> <h7>Key Value<br/>
-         <li> <h7>Wide Column<br/>
-         <li> <h7>Document Based<br/>
-         <li> <h7>Graph Based<br/>
+         <li> <h6>Key Value<br/>
+         <li> <h6>Wide Column<br/>
+         <li> <h6>Document Based<br/>
+         <li> <h6>Graph Based<br/>
         </ul> 
     </ul>
-<li> <h5>Caching
-<li> <h5>Data Center/hosts
-<li> <h5>CPU/Memory/Harddrive/Network Bandwith
-<li> <h5>Random vs Sequential read/write on disk
-<li> <h5>Http Vs Https Vs WebSocket
-<li> <h5>TCP/IP model
-<li> <h5>Ipv4 Vs Ipv6
-<li> <h5>TCP vs UDP
-<li> <h5>DNS lookUp
-<li> <h5>Https & TLS
-<li> <h5>Public key infrastructure & Certificate Autherity
-<li> <h5>Symetric Vs Asymetric
-<li> <h5>Load Balancer 
+<li> <h4>Caching
+<li> <h4>Data Center/hosts
+<li> <h4>CPU/Memory/Harddrive/Network Bandwith
+<li> <h4>Random vs Sequential read/write on disk
+<li> <h4>Http Vs Https Vs WebSocket
+<li> <h4>TCP/IP model
+<li> <h4>Ipv4 Vs Ipv6
+<li> <h4>TCP vs UDP
+<li> <h4>DNS lookUp
+<li> <h4>Https & TLS
+<li> <h4>Public key infrastructure & Certificate Autherity
+<li> <h4>Symetric Vs Asymetric
+<li> <h4>Load Balancer 
     <ul>
         <li><h6> L4 Vs L7
     </ul>
-<li> <h5>CDNs & Edges
-<li> <h5>Bloom filters & Count-min sketch
-<li> <h5>Paxos 
-<li> <h5>Pub-Sub Over Queue
+<li> <h4>CDNs & Edges
+<li> <h4>Bloom filters & Count-min sketch
+<li> <h4>Paxos 
+<li> <h4>Pub-Sub Over Queue
 </ul>
