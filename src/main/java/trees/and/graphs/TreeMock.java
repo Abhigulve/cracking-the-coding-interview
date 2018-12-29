@@ -22,4 +22,14 @@ public class TreeMock {
 //        left1.left = new TreeNode(3);
         return treeNode;
     }
+
+    public static TreeNode getTreeNodeUnbalance() {
+        TreeNode treeNode = getTreeNode();
+        TreeNode left = new TreeNode(1);
+        treeNode.left.left = left;
+        TreeNode leftLeft = new TreeNode(45);
+        leftLeft.left = new TreeNode(44);
+        left.left = leftLeft;
+        return treeNode;
+    }
 }
