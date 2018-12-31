@@ -3,7 +3,7 @@
     <li> <h4>Vertical Vs Horizontal scaling<br/>
     <li> <h4>CAP<br/>
     <li> <h4>ACID vs BASE<br/>
-    <li> <h4>Partitioning vs Sharing<br/> 
+    <li> <h4>Partitioning vs Sharding<br/> 
     <ul> <h4>Consistent hashing in sharding</ul>
     <li> <h4>Optimistic vs Pesimistic locking<br/>
     <li> <h4>Strong vs Eventual consistency<br/>
