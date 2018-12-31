@@ -11,10 +11,10 @@
     <ul>
         <li><h5>Type of NoSql <br/>
             <ul>
-             <li> <h6>Key Value<br/>
-             <li> <h6>Wide Column<br/>
-             <li> <h6>Document Based<br/>
-             <li> <h6>Graph Based<br/>
+             <li> <h6>Key Value</ul>
+             <li> <h6>Wide Column</ul>
+             <li> <h6>Document Based</ul>
+             <li> <h6>Graph Based</ul>
             </ul> 
         </ul>
     <li> <h4>Caching
