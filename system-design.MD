@@ -4,7 +4,7 @@
     <li> <h4>CAP<br/>
     <li> <h4>ACID vs BASE<br/>
     <li> <h4>Partitioning vs Sharding<br/> 
-    <ul> <h4>Consistent hashing in sharding</ul>
+    <ul> <h4>Consistent hashing in sharding<br/>
     <li> <h4>Optimistic vs Pesimistic locking<br/>
     <li> <h4>Strong vs Eventual consistency<br/>
     <li> <h4>Relational DB vs NoSql<br/>
