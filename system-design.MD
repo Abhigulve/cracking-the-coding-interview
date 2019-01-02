@@ -40,6 +40,6 @@
 </ul>
 <h3>Good to know
     <ul>
-        Gossip protocole
+        <ui><h5>Gossip protocole
         </ul>
 
