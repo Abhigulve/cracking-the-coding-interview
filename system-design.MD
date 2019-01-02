@@ -38,3 +38,8 @@
     <li> <h4>Paxos 
     <li> <h4>Pub-Sub Over Queue
 </ul>
+<h3>Good to know
+    <ul>
+        Gossip protocole
+        </ul>
+
