@@ -10,7 +10,7 @@ public class TreeMock {
         /* Constructed binary tree is
              10
             /  \
-          8     2
+          8     20
          /
         3
         */
@@ -19,7 +19,6 @@ public class TreeMock {
         TreeNode right1 = new TreeNode(20);
         treeNode.left = left1;
         treeNode.right = right1;
-//        left1.left = new TreeNode(3);
         return treeNode;
     }
 
@@ -30,6 +29,23 @@ public class TreeMock {
         TreeNode leftLeft = new TreeNode(45);
         leftLeft.left = new TreeNode(44);
         left.left = leftLeft;
+        return treeNode;
+    }
+
+    public static TreeNode getTreeNodeAncestor() {
+        /* Constructed binary tree is
+             10
+            /  \
+          8     20
+        */
+        TreeNode treeNode = new TreeNode(10);
+        TreeNode left10 = new TreeNode(8);
+        TreeNode right10 = new TreeNode(20);
+        treeNode.left = left10;
+        treeNode.right = right10;
+        left10.left = new TreeNode(3);
+        left10.left = new TreeNode(3);
+
         return treeNode;
     }
 }
