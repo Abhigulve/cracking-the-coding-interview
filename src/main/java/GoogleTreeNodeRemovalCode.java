@@ -9,6 +9,31 @@ import java.util.List;
  */
 public class GoogleTreeNodeRemovalCode {
 
+    /**
+     * Question
+     *
+     *         10
+     *       /   \
+     *     20    3
+     *    /
+     *   4
+     *
+     *    Let say i'm having one method that will return me true or false based on we need to put that node in our tree or not.
+     *
+     *    <p>
+     *        If it has return me true then that node been removed from tree and remaining tree will break in to multiple trees
+     *        <p>
+     *            Ex.
+     *            Let's consider above tree and our method returns true for 20 then result will be having two trees
+     *            1 is 4 and remaining is of 10. These are became root node of tree
+     *        </p>
+     *
+     *    </p>
+     */
+
+
+
+
     public static void main(String[] args) {
         TreeNode treeNodeAncestor = TreeMock.getTreeNodeAncestor();
         List<TreeNode> list = new ArrayList<>();
