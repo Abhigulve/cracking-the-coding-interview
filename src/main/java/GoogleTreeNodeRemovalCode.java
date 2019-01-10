@@ -49,9 +49,6 @@ public class GoogleTreeNodeRemovalCode {
         if (node == null) {
             return false;
         }
-        if (node.data == 8) {
-            System.out.println();
-        }
         if (isPartOfTree(node)) {
             getNextNode(node.right, list, true, false);
             getNextNode(node.left, list, true, false);
@@ -60,11 +57,10 @@ public class GoogleTreeNodeRemovalCode {
             if (parentBreak) {
                 list.add(node);
                 return true;
-            }else if(isRoot && list.size()>0){
+            }else if(isRoot){
                 list.add(node);
             }
         }
         return false;
     }
-
 }
