@@ -44,7 +44,7 @@ public class TreeMock {
         treeNode.left = left10;
         treeNode.right = right10;
         left10.left = new TreeNode(3);
-        left10.left = new TreeNode(3);
+        left10.left.left = new TreeNode(9);
 
         return treeNode;
     }

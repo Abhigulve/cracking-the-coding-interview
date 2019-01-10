@@ -11,52 +11,58 @@ public class GoogleTreeNodeRemovalCode {
 
     /**
      * Question
+     * <p>
+     * 10
+     * /   \
+     * 20    3
+     * /
+     * 4
+     * <p>
+     * Let say i'm having one method that will return me true or false based on we need to put that node in our tree or not.
      *
-     *         10
-     *       /   \
-     *     20    3
-     *    /
-     *   4
+     * <p>
+     * If it has return me true then that node been removed from tree and remaining tree will break in to multiple trees
+     * <p>
+     * Ex.
+     * Let's consider above tree and our method returns true for 20 then result will be having two trees
+     * 1 is 4 and remaining is of 10. These are became root node of tree
+     * </p>
      *
-     *    Let say i'm having one method that will return me true or false based on we need to put that node in our tree or not.
-     *
-     *    <p>
-     *        If it has return me true then that node been removed from tree and remaining tree will break in to multiple trees
-     *        <p>
-     *            Ex.
-     *            Let's consider above tree and our method returns true for 20 then result will be having two trees
-     *            1 is 4 and remaining is of 10. These are became root node of tree
-     *        </p>
-     *
-     *    </p>
+     * </p>
      */
-
-
 
 
     public static void main(String[] args) {
         TreeNode treeNodeAncestor = TreeMock.getTreeNodeAncestor();
         List<TreeNode> list = new ArrayList<>();
-        getNextNode(treeNodeAncestor, list, false);
+        getNextNode(treeNodeAncestor, list, false, true);
         System.out.println(list);
     }
 
     public static boolean isPartOfTree(TreeNode node) {
-        if (node.data == 13 || node.data == 2 || node.data == 8)
+        if (node.data == 13 || node.data == 2 || node.data == 18)
             return true;
         else return false;
     }
 
-    public static boolean getNextNode(TreeNode node, List<TreeNode> list, boolean parentBreak) {
+    public static boolean getNextNode(TreeNode node, List<TreeNode> list, boolean parentBreak, boolean isRoot) {
         if (node == null) {
             return false;
         }
+        if (node.data == 8) {
+            System.out.println();
+        }
         if (isPartOfTree(node)) {
-            getNextNode(node.right, list, true);
-            getNextNode(node.left, list, true);
+            getNextNode(node.right, list, true, false);
+            getNextNode(node.left, list, true, false);
             return true;
-        } else if (getNextNode(node.right, list, false) || getNextNode(node.left, list, false) || parentBreak) {
-            list.add(node);
+        } else if (getNextNode(node.right, list, false, false) || getNextNode(node.left, list, false, false) || parentBreak || isRoot) {
+            if (parentBreak) {
+                list.add(node);
+                return true;
+            }else if(isRoot && list.size()>0){
+                list.add(node);
+            }
         }
         return false;
     }
