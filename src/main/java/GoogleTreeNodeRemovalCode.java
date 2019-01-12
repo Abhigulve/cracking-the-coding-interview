@@ -57,10 +57,10 @@ public class GoogleTreeNodeRemovalCode {
             if (parentBreak) {
                 list.add(node);
             }else if(isRoot && list.size()>0){
+
                 list.add(node);
             }
         }
         return false;
     }
-
 }
