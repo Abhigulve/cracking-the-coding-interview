@@ -12,11 +12,11 @@ public class GoogleTreeNodeRemovalCode {
     /**
      * Question
      * <p>
-     * 10
-     * /   \
-     * 20    3
-     * /
-     * 4
+     *      10
+     *     /  \
+     *    20   3
+     *    /
+     *   4
      * <p>
      * Let say i'm having one method that will return me true or false based on we need to put that node in our tree or not.
      *
@@ -40,7 +40,7 @@ public class GoogleTreeNodeRemovalCode {
     }
 
     public static boolean isPartOfTree(TreeNode node) {
-        if (node.data == 13 || node.data == 2 || node.data == 18)
+        if (node.data == 3 || node.data == 2 || node.data == 10)
             return true;
         else return false;
     }
@@ -49,9 +49,6 @@ public class GoogleTreeNodeRemovalCode {
         if (node == null) {
             return false;
         }
-        if (node.data == 8) {
-            System.out.println();
-        }
         if (isPartOfTree(node)) {
             getNextNode(node.right, list, true, false);
             getNextNode(node.left, list, true, false);
@@ -59,7 +56,6 @@ public class GoogleTreeNodeRemovalCode {
         } else if (getNextNode(node.right, list, false, false) || getNextNode(node.left, list, false, false) || parentBreak || isRoot) {
             if (parentBreak) {
                 list.add(node);
-                return true;
             }else if(isRoot && list.size()>0){
                 list.add(node);
             }
