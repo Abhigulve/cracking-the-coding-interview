@@ -20,6 +20,11 @@ public class RobotGrid {
                         {0, 1, 1, 0},
                         {0, 0, 1, 1}
                 };
+
+        /**
+         * Expected result is
+         *  [3 3, 3 2, 2 2, 2 1, 1 1, 1 0, 0 0]
+         */
         List<String> path = new ArrayList<>();
         isValidPath(0, 0, mat, path);
         System.out.println(path);
