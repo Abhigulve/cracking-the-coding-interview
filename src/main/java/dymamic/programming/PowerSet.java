@@ -29,6 +29,13 @@ public class PowerSet {
     }
 
     private static void getSubsets(String[] input, List<List<String>> res, int level, List<String> currentList) {
-
+        if (level > input.length - 1) {
+            res.add(currentList);
+        } else {
+            List<String> newList = new ArrayList<>(currentList);
+            getSubsets(input, res, level + 1, currentList);
+            newList.add(input[level]);
+            getSubsets(input, res, level + 1, newList);
+        }
     }
 }
