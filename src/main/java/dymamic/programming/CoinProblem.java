@@ -10,17 +10,17 @@ public class CoinProblem {
         System.out.println(coinDistribute(coin, 0, 10));
     }
 
-    static int coinDistribute(int[] coin, int level, int ammount) {
-        if (ammount < 0 || level >= coin.length) {
+    static int coinDistribute(int[] coin, int level, int amount) {
+        if (amount < 0 || level >= coin.length) {
             return 0;
         }
-        if (ammount == 0) {
+        if (amount == 0) {
             return 1;
         }
         int sum = 0;
         for (int i = level; i < coin.length; i++) {
 
-            sum += coinDistribute(coin, i, ammount - coin[i]);
+            sum += coinDistribute(coin, i, amount - coin[i]);
         }
         return sum;
     }
