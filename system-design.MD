@@ -22,6 +22,7 @@
     <li> <h4>CPU/Memory/Harddrive/Network Bandwith
     <li> <h4>Random vs Sequential read/write on disk
     <li> <h4>Http Vs Https Vs WebSocket
+        <ul><a href="https://www.youtube.com/watch?v=eesqK59rhGA">what is HTTP</a></ul>
     <li> <h4>TCP/IP model
     <li> <h4>Ipv4 Vs Ipv6
     <li> <h4>TCP vs UDP
